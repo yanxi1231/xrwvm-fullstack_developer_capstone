@@ -15,3 +15,5 @@
 - Static assets (images, CSS, Bootstrap) served through Django's **static files** system
 - A **React app** structure (`frontend/src`, `frontend/public`) is in place for future dynamic UI development
 - Overall goal: establish the **project setup, page layout, styling, and navigation** as the static foundation for later parts
+
+## Part 2: User management
