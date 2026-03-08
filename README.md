@@ -16,4 +16,20 @@
 - A **React app** structure (`frontend/src`, `frontend/public`) is in place for future dynamic UI development
 - Overall goal: establish the **project setup, page layout, styling, and navigation** as the static foundation for later parts
 
-## Part 2: User management
+## Part 2: User Authentication
+**Technologies used:** Python, Django, Django Auth, JavaScript, React, React Router, JSON, Bootstrap, SQLite
+
+- Created a Django **superuser** for admin access and management
+- Configured the React **frontend build** (`npm run build`) to compile into static files served by Django
+- Implemented **three Django views** in `views.py`:
+  - **`login_user`** — Authenticates user credentials using `django.contrib.auth.authenticate()` and creates a session
+  - **`logout_request`** — Terminates the user session using `django.contrib.auth.logout()` and returns empty JSON
+  - **`registration`** — Creates a new user account using Django's built-in `User` model
+- Configured **Django URL routes** in `djangoapp/urls.py` for `/login`, `/logout`, and `/register` endpoints
+- Built **React components** (`LoginPanel`, `RegisterPanel`) to provide the frontend UI for authentication
+- Added **React routes** in `App.js` using `react-router-dom` to navigate between login and register pages
+- Used **`@csrf_exempt`** decorator to allow JSON POST requests from the React frontend
+- Communication between React and Django uses **JSON** (`JsonResponse` on backend, `json.loads()` for parsing)
+- Updated **Django settings** to serve React's built static files
+- Verified the complete **sign up → sign in → sign out** flow works end to end
+
