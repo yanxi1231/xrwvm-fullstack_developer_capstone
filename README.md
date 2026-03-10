@@ -33,3 +33,15 @@
 - Updated **Django settings** to serve React's built static files
 - Verified the complete **sign up → sign in → sign out** flow works end to end
 
+## Backend services:
+### Node.js Mongo DB dockerized server
+**Technologies Used:** Node.js, Express.js, MongoDB, Mongoose, Docker, IBM Code Engine, Django
+
+- Developed a **Node.js backend application** using **Express.js** to provide RESTful API services.
+- Connected the application to a **MongoDB database** using **Mongoose** for managing dealership and review data.
+- Loaded initial data from **JSON files** into MongoDB collections.
+- Implemented and tested API endpoints such as `/fetchReviews/dealer/:id`, `/fetchDealers`, and `/fetchDealers/:state`...
+- Containerized the application using **Docker** for consistent deployment.
+- Deployed the containerized backend on **IBM Code Engine** so the **Django application** can access the APIs.
+
+### Django Models and Proxy Services
