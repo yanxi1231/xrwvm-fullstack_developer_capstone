@@ -45,12 +45,10 @@
 - Deployed the containerized backend on **IBM Code Engine** so the **Django application** can access the APIs.
 
 ### Django Models and Proxy Services
-**Technologies Used:** Django, Python, React, REST APIs
+**Technologies Used:** Django, Python, React, REST APIs, Node.js, Express.js, MongoDB
 
 - Created **CarMake** and **CarModel** data models in the Django application to represent car manufacturers and their vehicle models.
 - Defined relationships between **car makes, car models, and dealerships**, including attributes such as model year, car type, and dealer ID.
 - Registered the **CarMake** and **CarModel** models with the **Django admin site** to enable easy data management.
-- Added sample **car make and car model objects** and associated them with dealerships.
-- Implemented **Django proxy services and views** to integrate external dealership and review APIs.
-- Processed API responses in Django views and rendered the data using **React components** in the frontend.
-
+- Utilized **Express API endpoints backed by MongoDB** to retrieve dealership and review data.
+- Implemented **Django views that act as proxy services**, allowing the Django application to request data from external APIs.
