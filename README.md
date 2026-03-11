@@ -62,5 +62,12 @@
 - Built a **Review Submission page** that allows users to add and submit reviews for dealerships.
 - Integrated the React frontend with the previously created **Django backend services and APIs** to fetch and display data dynamically.
 
+## Part 4
+### CI/CD:
+**Technologies Used:** GitHub Actions, Git, Linting Tools
+- Implemented **Continuous Integration (CI)** and **Continuous Delivery (CD)** to support collaboration among multiple developers.
+- Ensured that all code pushed to the repository follows team coding standards and is free of syntax errors.
+- Added an automated **linting workflow** that runs whenever code is pushed or a pull request is created.
+
 
 
