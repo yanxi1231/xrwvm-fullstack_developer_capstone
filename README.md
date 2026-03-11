@@ -33,7 +33,7 @@
 - Updated **Django settings** to serve React's built static files
 - Verified the complete **sign up → sign in → sign out** flow works end to end
 
-## Backend services:
+## Part 3: Backend services:
 ### Node.js Mongo DB dockerized server
 **Technologies Used:** Node.js, Express.js, MongoDB, Mongoose, Docker, IBM Code Engine, Django
 
@@ -52,3 +52,15 @@
 - Registered the **CarMake** and **CarModel** models with the **Django admin site** to enable easy data management.
 - Utilized **Express API endpoints backed by MongoDB** to retrieve dealership and review data.
 - Implemented **Django views that act as proxy services**, allowing the Django application to request data from external APIs.
+
+## Part 4: Dynamic Pages
+**Technologies Used:** React, JavaScript, Django, REST APIs
+
+- Developed the **frontend of the application using React** to display dealership and review information to users.
+- Created a **Dealers component** to list all available dealerships retrieved from backend services.
+- Implemented a **Dealer Details component** to display detailed information and customer reviews for a selected dealer.
+- Built a **Review Submission page** that allows users to add and submit reviews for dealerships.
+- Integrated the React frontend with the previously created **Django backend services and APIs** to fetch and display data dynamically.
+
+
+
