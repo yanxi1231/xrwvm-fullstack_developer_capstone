@@ -1,5 +1,25 @@
 # fullstack_developer_capstone
 
+A full-stack car dealership review platform built with a **microservices architecture**. Users can browse dealerships across the US, read reviews with AI-powered sentiment analysis, and submit their own reviews after registering.
+
+**Tech stack:**
+- **Frontend**: React 18 with React Router for SPA navigation
+- **Backend**: Django (Python) as the central API gateway handling authentication, proxying requests, and serving the React build
+- **Data Service**: Node.js/Express REST API with MongoDB (Mongoose) storing dealership and review data
+- **NLP Microservice**: Flask + NLTK VADER for real-time sentiment analysis of review text
+- **Deployment**: Docker Compose for local orchestration, Terraform for automated AWS EC2 provisioning, GitHub Actions CI/CD for linting
+- **Infrastructure**: Multi-stage Docker builds, Kubernetes deployment manifests, IBM Cloud Container Registry
+
+The Django backend acts as a gateway — it authenticates users, fetches dealership/review data from the Express API, enriches reviews with sentiment from the Flask microservice, and returns the combined response to the React frontend.
+
+### Resume Bullet Points
+
+- **Built a full-stack car dealership review platform** using React, Django, Node.js/Express, MongoDB, and Flask, following a microservices architecture with 4 independently deployable services communicating via REST APIs
+- **Implemented NLP-powered sentiment analysis** using NLTK VADER as a Flask microservice, processing review text in real-time and classifying sentiment as positive, negative, or neutral
+- **Containerized and orchestrated the entire application** using Docker Compose with multi-stage builds, and automated AWS infrastructure provisioning with Terraform (EC2, security groups, VPC)
+- **Designed a backend gateway pattern** in Django that proxies and aggregates data from a Node.js data service and a Python NLP microservice, handling user authentication, session management, and API orchestration
+- **Set up CI/CD pipeline** with GitHub Actions for automated Python (flake8) and JavaScript (JSHint) linting, with Kubernetes deployment manifests for production
+
 <img src="architecture.png" alt="My Image" width="60%">
 
 ## Part 1: Frontend Design with Django
