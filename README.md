@@ -1,5 +1,7 @@
 # fullstack_developer_capstone
 
+<img src="architecture.png" alt="My Image" width="60%">
+
 ## Part 1: Frontend Design with Django
 
 - Set up a Python **virtual environment** (`djangoenv`) to isolate project dependencies
