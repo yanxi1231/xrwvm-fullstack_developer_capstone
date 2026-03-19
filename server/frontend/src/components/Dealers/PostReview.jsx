@@ -53,6 +53,7 @@ const PostReview = () => {
       headers: {
           "Content-Type": "application/json",
       },
+      credentials: "same-origin",
       body: jsoninput,
   });
 

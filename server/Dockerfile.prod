@@ -1,0 +1,29 @@
+# Stage 1: Build React frontend
+FROM node:18-slim AS frontend-build
+WORKDIR /frontend
+COPY frontend/package.json frontend/package-lock.json ./
+RUN npm ci
+COPY frontend/ ./
+RUN npm run build
+
+# Stage 2: Django + Gunicorn
+FROM python:3.12.0-slim-bookworm
+
+ENV PYTHONUNBUFFERED=1
+ENV APP=/app
+WORKDIR $APP
+
+COPY requirements.txt $APP/
+RUN pip3 install -r requirements.txt
+
+COPY . $APP/
+
+# Copy React build output into Django's frontend/build
+COPY --from=frontend-build /frontend/build $APP/frontend/build
+
+EXPOSE 8000
+
+RUN chmod +x /app/entrypoint.sh
+
+ENTRYPOINT ["/bin/bash", "/app/entrypoint.sh"]
+CMD ["gunicorn", "--bind", ":8000", "--workers", "3", "djangoproj.wsgi"]

@@ -1,0 +1,5 @@
+aws_region       = "us-east-1"
+instance_type    = "t3.small"
+key_name         = "my-aws-keypair"       # Your existing EC2 key pair name
+allowed_ssh_cidr = "0.0.0.0/0"            # Restrict to your IP: "1.2.3.4/32"
+repo_url         = "https://github.com/<your-username>/xrwvm-fullstack_developer_capstone.git"
