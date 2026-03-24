@@ -56,7 +56,6 @@ app.get('/fetchReviews/dealer/:id', async (req, res) => {
   }
 });
 
-
 // Express route to fetch all dealerships
 app.get('/fetchDealers', async (req, res) => {
     try {
@@ -67,7 +66,6 @@ app.get('/fetchDealers', async (req, res) => {
     }
 });
 
-
 // Express route to fetch Dealers by a particular state
 app.get('/fetchDealers/:state', async (req, res) => {
     try {
@@ -77,7 +75,6 @@ app.get('/fetchDealers/:state', async (req, res) => {
       res.status(500).json({ error: 'Error fetching documents' });
     }
   });
-
 
 // Express route to fetch dealer by a particular id
 app.get('/fetchDealer/:id', async (req, res) => {

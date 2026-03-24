@@ -1,5 +1,16 @@
 # fullstack_developer_capstone
 
+Frontend (React)
+      ↓
+API Gateway
+      ↓
+-------------------------
+Auth Service (Django)
+Dealership Service (Node)
+Review Service (Node)
+NLP Service (Flask)
+-------------------------
+
 A full-stack car dealership review platform built with a **microservices architecture**. Users can browse dealerships across the US, read reviews with AI-powered sentiment analysis, and submit their own reviews after registering.
 
 **Tech stack:**
@@ -13,6 +24,15 @@ A full-stack car dealership review platform built with a **microservices archite
 The Django backend acts as a gateway — it authenticates users, fetches dealership/review data from the Express API, enriches reviews with sentiment from the Flask microservice, and returns the combined response to the React frontend.
 
 ### Resume Bullet Points
+A microservices-based web application that allows users to browse car
+  dealerships, read and post reviews, and view AI-powered sentiment analysis
+  on each review.
+
+Django Gateway (Python) — Central backend serving as both an
+  authentication server (user registration, login, sessions) and an API
+  gateway that proxies requests to downstream services, enriching review data
+  with sentiment before returning it to the client
+
 
 - **Built a full-stack car dealership review platform** using React, Django, Node.js/Express, MongoDB, and Flask, following a microservices architecture with 4 independently deployable services communicating via REST APIs
 - **Implemented NLP-powered sentiment analysis** using NLTK VADER as a Flask microservice, processing review text in real-time and classifying sentiment as positive, negative, or neutral
